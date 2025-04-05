@@ -1,6 +1,11 @@
 {
+  "resources/css/HomePage.css": {
+    "file": "assets/HomePage-DeZIPbrh.css",
+    "src": "resources/css/HomePage.css",
+    "isEntry": true
+  },
   "resources/css/app.css": {
-    "file": "assets/app-Z0vxOzsj.css",
+    "file": "assets/app-D9uEDYAU.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
