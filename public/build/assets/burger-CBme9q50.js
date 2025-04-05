@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("burger_icon"),n=document.querySelector(".nav_links");e&&e.addEventListener("click",function(){n.classList.toggle("show"),e.classList.toggle("active_burger",n.classList.contains("show"))})});

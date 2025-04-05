@@ -1,0 +1,28 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-Z0vxOzsj.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/icons/icons.css": {
+    "file": "assets/icons-l0sNRNKZ.js",
+    "name": "icons",
+    "src": "resources/css/icons/icons.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-C04xZBZN.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/burger.js"
+    ]
+  },
+  "resources/js/burger.js": {
+    "file": "assets/burger-CBme9q50.js",
+    "name": "burger",
+    "src": "resources/js/burger.js",
+    "isDynamicEntry": true
+  }
+}
