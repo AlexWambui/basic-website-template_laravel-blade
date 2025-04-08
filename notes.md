@@ -39,3 +39,8 @@
 ### Laravel Details
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+
+
+-------------------------------------------------
+Sass:
+cd resources/css && sass -w pages/HomePage.scss:pages/HomePage.css pages/AboutPage.scss:pages/AboutPage.css pages/ContactPage.scss:pages/ContactPage.css pages/ServicesPage.scss:pages/ServicesPage.css
