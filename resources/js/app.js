@@ -1,7 +1,4 @@
 import './bootstrap';
 
 import './notification';
-
-if (document.getElementById('burger_icon')) {
-	import('./navbar');
-}
+import './navbar';
