@@ -7,8 +7,10 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/icons/icons.css',
-                'resources/css/app.css',
-                'resources/css/HomePage.css',
+                'resources/css/pages/HomePage.css',
+                'resources/css/pages/AboutPage.css',
+                'resources/css/pages/ServicesPage.css',
+                'resources/css/pages/ContactPage.css',
 
                 'resources/js/app.js'
             ],

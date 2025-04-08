@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 5px 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+nav a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+nav .branding {
+  display: flex;
+  gap: 0.8em;
+  align-items: center;
+}
+nav .branding img {
+  height: 40px;
+  width: 40px;
+}
+nav .branding a {
+  font-size: 1.2rem;
+}
+nav .nav_links {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+nav .nav_links .links {
+  display: flex;
+  gap: 1.6em;
+}
+nav .nav_links .links .active {
+  padding: 0 0 0.28em;
+  border-bottom: 2px solid #fff;
+}
+nav .nav_links .actions a {
+  padding: 12px 24px;
+  border-radius: 32px;
+  background: #fff;
+  color: #000;
+}
+nav .burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+nav .burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.4s ease;
+}
+nav .burger.active_burger .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+nav .burger.active_burger .line2 {
+  opacity: 0;
+}
+nav .burger.active_burger .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media screen and (max-width: 1024px) {
+  nav .nav_links {
+    position: absolute;
+    flex-direction: column;
+    gap: 2em;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+  nav .nav_links.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav .nav_links .links,
+  nav .nav_links .actions {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0 2em;
+  }
+  nav .burger {
+    display: block;
+  }
+}
+footer {
+  background: #000;
+  color: #fff;
+  padding: 2rem 0;
+}
+footer a {
+  color: #fff;
+  font-weight: bold;
+}
+footer .container {
+  padding-bottom: 1em;
+  display: grid;
+  gap: 2em;
+}
+footer .container .links {
+  display: grid;
+}
+footer .copyright {
+  padding: 1em 0 0;
+  border-top: 1px solid grey;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .container {
+    grid-template-columns: 40% 1fr 1fr;
+  }
+}
+.HomePage {
+  background: blue;
+  color: red;
+}
+
+/*# sourceMappingURL=HomePage.css.map */

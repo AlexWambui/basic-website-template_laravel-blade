@@ -1,11 +1,12 @@
-<nav>
-    <div class="brand">
-        <a href="{{ Route::has('home-page') ? route('home-page') : '#' }}" class="title">
-            {{ $appSettings['app_acronym'] ?? config('globals.app_acronym') }}
+<nav aria-label="Main Navigation">
+    <div class="branding">
+        <img src="./assets/images/default-image.webp" alt="Aaqil Softwares Logo" />
+        <a href="{{ Route::has('home-page') ? route('home-page') : '#' }}">
+            {{ config('app.name') }}
         </a>
     </div>
 
-    <div class="nav_links">
+    <div class="nav_links" id="navLinks" role="navigation">
         @php
             $nav_links = [
                 ['route' => 'about-page', 'text' => 'About'],
@@ -14,42 +15,24 @@
             ];
         @endphp
 
-        @auth            
-            <a href="{{ Route::has('dashboard') ? route('dashboard') : '#' }}">Dashboard</a>
-        @endauth
-
-        @foreach($nav_links as $nav_link)
-            <a 
-            href="{{ Route::has($nav_link['route']) ? route($nav_link['route']) : '#' }}" 
-            class="nav_link {{ Route::currentRouteName() === $nav_link['route'] ? 'active' : '' }}">
-                {{ $nav_link['text'] }}
-            </a>
-        @endforeach
-    </div>
-    
-    <div class="nav_authentication">
-        @auth
-            <div class="actions">
-                <a href="{{ Route::has('profile.edit') ? route('home-page') : '#' }}" class="profile">
-                    <i class="fa fa-user"></i>
+        <div class="links">
+            @foreach($nav_links as $nav_link)
+                <a 
+                href="{{ Route::has($nav_link['route']) ? route($nav_link['route']) : '#' }}" 
+                class="nav_link {{ Route::currentRouteName() === $nav_link['route'] ? 'active' : '' }}">
+                    {{ $nav_link['text'] }}
                 </a>
-    
-                <form action="{{ Route::has('logout') ? route('home-page') : '#' }}" method="post">
-                    @csrf
-    
-                    <button type="submit" class="logout_btn">Logout</button>
-                </form>
-            </div>
-        @else
-            <a href="{{ Route::has('login') ? route('home-page') : '#' }}" class="login_btn">Login</a>
-        @endif
-    </div>
+            @endforeach
+        </div>
 
-    <div class="burger_menu">
-        <div class="burger_icon" id="burgerIcon">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="actions">
+            <a href="{{ Route::has('contact-page') ? route('contact-page') : '#' }}">Make an Inquiry</a>
         </div>
     </div>
+
+    <button class="burger" id="burgerIcon" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </button>
 </nav>

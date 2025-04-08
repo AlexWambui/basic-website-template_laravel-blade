@@ -2,7 +2,7 @@
     <x-slot name="head">
         <meta name="description" content="{{ config('app.name') }} is a leading ---replace_service provided--- based in {{ config('app.address') }}, specializing in ---replace_list services you special in---.">
         <meta name="keywords" content="---replace_list-keywords-associated-to-your-company---">
-        @vite(['resources/css/HomePage.css'])
+        @vite(['resources/css/pages/HomePage.css'])
         <title>{{ config('app.name') }} - Aaqil Softwares</title>
 
 

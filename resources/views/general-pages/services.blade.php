@@ -2,6 +2,7 @@
     <x-slot name="head">
         <meta name="description" content="At {{ config('app.name') }}, we offer a wide range of services with a specialization in ---replace_list of services you offer---.">
         <meta name="keywords" content="---replace_main service you offer--- {{ config('app.location') }}, ---replace_list of other services you provide---.">
+        @vite(['resources/css/pages/ServicesPage.css'])
         <title>{{ config('app.name') }} - Services We Provide</title>
 
 

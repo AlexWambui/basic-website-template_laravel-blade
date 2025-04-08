@@ -8,9 +8,9 @@
         
         <meta name="author" content="Alex Aaqil">
 
-        <link rel="icon" href="{{ asset('resources/images/default_image.jpg') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('assets/images/default-image.webp') }}" type="image/x-icon">
 
-        @vite(['resources/css/icons/icons.css', 'resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/icons/icons.css', 'resources/js/app.js'])
 
         {{ $head ?? '' }}
     </head>
