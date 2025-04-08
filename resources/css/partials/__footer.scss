@@ -13,8 +13,27 @@ footer {
 		display: grid;
 		gap: 2em;
 
+		.branding {
+			.title {
+				font-size: 1.2rem;
+				font-weight: bold;
+			}
+
+			.address {
+				font-style: italic;
+			}
+		}
+
 		.links {
 			display: grid;
+		}
+
+		.contacts {
+			.socials {
+				display: flex;
+				gap: 1.2em;
+				margin: 1.2em 0 0;
+			}
 		}
 	}
 

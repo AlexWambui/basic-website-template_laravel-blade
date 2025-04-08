@@ -30,6 +30,7 @@
 
     <section class="Hero">
         <div class="container">
+            <i class="fa fa-home"></i>
             <h1>Home Page</h1>
         </div>
     </section>

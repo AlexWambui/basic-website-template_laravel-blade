@@ -127,8 +127,20 @@ footer .container {
   display: grid;
   gap: 2em;
 }
+footer .container .branding .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+footer .container .branding .address {
+  font-style: italic;
+}
 footer .container .links {
   display: grid;
+}
+footer .container .contacts .socials {
+  display: flex;
+  gap: 1.2em;
+  margin: 1.2em 0 0;
 }
 footer .copyright {
   padding: 1em 0 0;
@@ -143,7 +155,7 @@ footer .copyright {
 }
 .HomePage {
   background: blue;
-  color: red;
+  color: lightcoral;
 }
 
 /*# sourceMappingURL=HomePage.css.map */

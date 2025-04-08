@@ -2,8 +2,8 @@
     <div class="container">
         <section class="branding">
             <p class="title">{{ config('app.name') }}</p>
-            <p>Better start for new projects.</p>
-            <p>{{ config('app.address') }}</p>
+            <p class="slogan">Better start for new projects.</p>
+            <p class="address">{{ config('app.address') }}</p>
         </section>
 
         <section class="links">
@@ -26,11 +26,11 @@
 
             <div class="socials">
                 <a href="{{ config('app.whatsapp') }}">
-                    <img src="{{ asset('assets/images/whatsapp.png') }}" alt="{{ config('app.name') }} Whatsapp" width="30px" height="30px">
+                    <img src="{{ asset('assets/images/whatsapp.webp') }}" alt="{{ config('app.name') }} Whatsapp" width="25" height="25">
                 </a>
 
                 <a href="#">
-                    <img src="{{ asset('assets/images/instagram.png') }}" alt="{{ config('app.name') }} Instagram" width="30px" height="30px">
+                    <img src="{{ asset('assets/images/instagram.webp') }}" alt="{{ config('app.name') }} Instagram" width="25" height="25">
                 </a>
             </div>
         </section>

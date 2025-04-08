@@ -6,7 +6,7 @@
         </a>
     </div>
 
-    <div class="nav_links" id="navLinks" role="navigation">
+    <div class="nav_links" id="nav_links" role="navigation">
         @php
             $nav_links = [
                 ['route' => 'about-page', 'text' => 'About'],
@@ -19,7 +19,7 @@
             @foreach($nav_links as $nav_link)
                 <a 
                 href="{{ Route::has($nav_link['route']) ? route($nav_link['route']) : '#' }}" 
-                class="nav_link {{ Route::currentRouteName() === $nav_link['route'] ? 'active' : '' }}">
+                class="{{ Route::currentRouteName() === $nav_link['route'] ? 'active' : '' }}">
                     {{ $nav_link['text'] }}
                 </a>
             @endforeach
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <button class="burger" id="burgerIcon" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+    <button class="burger" id="burger_icon" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
         <span class="line1"></span>
         <span class="line2"></span>
         <span class="line3"></span>
