@@ -13,6 +13,66 @@ a {
   text-decoration: none;
 }
 
+.custom_form .custom_inputs {
+  position: relative;
+  min-height: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+.custom_form .custom_inputs:last-of-type {
+  margin-bottom: 2rem;
+}
+.custom_form .custom_inputs input,
+.custom_form .custom_inputs textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid grey;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  background: transparent;
+}
+.custom_form .custom_inputs input:focus,
+.custom_form .custom_inputs textarea:focus {
+  border-color: blue;
+}
+.custom_form .custom_inputs input:focus + label, .custom_form .custom_inputs input:not(:placeholder-shown) + label,
+.custom_form .custom_inputs textarea:focus + label,
+.custom_form .custom_inputs textarea:not(:placeholder-shown) + label {
+  top: -0.84rem;
+  left: 0rem;
+  font-size: 0.96rem;
+  color: blue;
+  padding: 0 0.4rem;
+  background: white;
+}
+.custom_form .custom_inputs label {
+  position: absolute;
+  left: 1rem;
+  top: 1.5em;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+.custom_form .custom_inputs span {
+  display: block;
+  font-weight: bold;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+.custom_form button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 nav {
   background: #000;
   color: #fff;
@@ -127,8 +187,20 @@ footer .container {
   display: grid;
   gap: 2em;
 }
+footer .container .branding .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+footer .container .branding .address {
+  font-style: italic;
+}
 footer .container .links {
   display: grid;
+}
+footer .container .contacts .socials {
+  display: flex;
+  gap: 1.2em;
+  margin: 1.2em 0 0;
 }
 footer .copyright {
   padding: 1em 0 0;

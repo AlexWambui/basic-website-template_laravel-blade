@@ -1,0 +1,36 @@
+@import "_guest";
+
+.Authentication {
+	height: 90dvh;
+	display: flex;
+	align-items: center;
+
+	.remember_me,
+	.forgot_password {
+		margin: 0 0 0.8em;
+	}
+
+	.extras {
+		margin: 2em 0 0;
+		text-align: center;
+	}
+
+	.Login,
+	.Signup {
+		width: 92dvw;
+		margin: auto;
+		padding: 16px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.Authentication {
+		.Login {
+			width: 30dvw;
+		}
+
+		.Signup {
+			width: 45dvw;
+		}
+	}
+}

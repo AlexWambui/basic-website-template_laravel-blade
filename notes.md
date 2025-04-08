@@ -43,4 +43,4 @@
 
 -------------------------------------------------
 Sass:
-cd resources/css && sass -w pages/HomePage.scss:pages/HomePage.css pages/AboutPage.scss:pages/AboutPage.css pages/ContactPage.scss:pages/ContactPage.css pages/ServicesPage.scss:pages/ServicesPage.css
+cd resources/css && sass -w pages/HomePage.scss:pages/HomePage.css pages/AboutPage.scss:pages/AboutPage.css pages/ContactPage.scss:pages/ContactPage.css pages/ServicesPage.scss:pages/ServicesPage.css pages/Authentication.scss:pages/Authentication.css

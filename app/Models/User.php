@@ -18,7 +18,8 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
     ];
@@ -45,4 +46,17 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    const USERLEVELS = [
+        0 => 'super_admin',
+        1 => 'admin',
+        2 => 'owner',
+        3 => 'staff',
+        4 => 'user',
+    ];
+
+    const USERSTATUSES = [
+        0 => 'inactive',
+        1 => 'active',
+    ];
 }
