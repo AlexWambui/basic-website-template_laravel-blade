@@ -7,7 +7,7 @@
     <div class="header">
         <a href="{{ route('profile.edit') }}">
             @if($user->image)
-                <img src="{{ asset('storage/' . ($user->image)) }}" alt="User Image" width="25" height="25">
+                <img src="{{ asset('storage/user-images/' . ($user->image)) }}" alt="User Image" width="25" height="25">
             @else
                 <x-default-profile-image width="25" height="25" />
             @endif

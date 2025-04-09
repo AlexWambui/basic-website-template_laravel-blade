@@ -1,6 +1,6 @@
 <x-guest-layout class="Authentication">
     <x-slot name="head">
-        @vite(['resources/css/pages/Authentication.css'])
+        @vite(['resources/css/pages/compiled/Authentication.css'])
         <title>Signup</title>
     </x-slot>
     <section class="Signup">

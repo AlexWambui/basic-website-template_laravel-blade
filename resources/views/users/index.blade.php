@@ -35,7 +35,7 @@
                                 <tr class="searchable {{ $user->user_status == 0 ? 'inactive' : '' }}">
                                     <td class="center">{{ $loop->iteration }}</td>
                                     <td>
-                                        @if ($user->user_level_label === 'admin' || $user->user_level_label === 'super admin')
+                                        @if ($user->user_level_label === 'admin' || $user->user_level_label === 'super_admin')
                                             {{ $user->full_name }}
                                             <span class="badge {{ $user->user_level_label === 'admin' ? 'admin' : 'super_admin' }}">
                                                 {{ $user->user_level_label }}
@@ -44,8 +44,8 @@
                                             {{ $user->full_name }}
                                         @endif
                                     </td>
-                                    <td class="stacked {{ $user->email_verified_at == null ? 'unverified' : '' }}">
-                                        <span>{{ $user->email }}</span>
+                                    <td class="stacked">
+                                        <span class="{{ $user->email_verified_at == null ? 'text-danger' : '' }}">{{ $user->email }}</span>
                                         <span>{{ $user->phone_numbers }}</span>
                                     </td>
                                     <td class="actions center">
