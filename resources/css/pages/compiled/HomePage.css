@@ -9,6 +9,18 @@
   padding: 5px 5%;
 }
 
+.image {
+  border-radius: 8px;
+}
+.image img {
+  object-fit: cover;
+}
+
+img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 a {
   text-decoration: none;
 }
@@ -19,6 +31,10 @@ a {
 
 .center {
   text-align: center;
+}
+
+.text-danger {
+  color: #ff0000 !important;
 }
 
 button {
@@ -33,6 +49,11 @@ button {
   width: 100%;
 }
 
+.btn_danger {
+  background: #ff0000 !important;
+  color: #fff;
+}
+
 .custom_form .header {
   display: flex;
   gap: 0.8em;
@@ -42,7 +63,7 @@ button {
   border-radius: 8px 8px 0 0;
 }
 .custom_form .header a {
-  color: blue;
+  color: lightblue;
 }
 .custom_form input,
 .custom_form textarea {
@@ -68,7 +89,7 @@ button {
   font-weight: bold;
   font-size: 1em;
 }
-.custom_form span {
+.custom_form .inline_alert {
   display: block;
   font-weight: bold;
   color: red;
