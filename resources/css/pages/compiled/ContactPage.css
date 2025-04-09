@@ -13,10 +13,37 @@ a {
   text-decoration: none;
 }
 
+.stacked {
+  display: grid;
+}
+
+.center {
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .btn_block {
   width: 100%;
 }
 
+.custom_form .header {
+  display: flex;
+  gap: 0.8em;
+  background: #000;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 8px 8px 0 0;
+}
+.custom_form .header a {
+  color: blue;
+}
 .custom_form input,
 .custom_form textarea {
   width: 100%;
@@ -81,12 +108,8 @@ a {
 .custom_form button {
   background: black;
   color: white;
-  border: none;
   padding: 12px 24px;
   border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
@@ -102,7 +125,54 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-.alert {
+.table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table table thead {
+  background: #000;
+  color: #fff;
+}
+.table table thead th {
+  padding: 2px 4px;
+  font-size: 0.9em;
+  text-align: left;
+}
+.table table thead th:first-of-type {
+  border-radius: 4px 0 0 0;
+}
+.table table thead th:last-of-type {
+  border-radius: 0 4px 0 0;
+}
+.table table tbody tr {
+  border-bottom: 1px solid grey;
+}
+.table table tbody tr td {
+  padding: 4px;
+  font-size: 0.95em;
+}
+.table table tbody tr td p:not(:first-of-type),
+.table table tbody tr td div:not(:first-of-type) {
+  margin: 0.2em 0 0;
+}
+.table table tbody tr td img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.table table tbody tr .action_buttons {
+  display: flex;
+  gap: 0.8em;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification {
   padding: 0.5em 1em;
   border-radius: 4px;
   color: #fff;
@@ -116,19 +186,19 @@ a {
   z-index: 10;
 }
 
-.alert-danger {
+.notification-danger {
   background: #ff0000;
 }
 
-.alert-success {
+.notification-success {
   background: #008000;
 }
 
-.alert-status {
+.notification-status {
   background: #49cefa;
 }
 
-.alert-warning {
+.notification-warning {
   background: #c28005;
 }
 
@@ -283,33 +353,56 @@ footer .copyright {
     grid-template-columns: 40% 1fr 1fr;
   }
 }
-.Authentication {
-  height: 90dvh;
+.contactpage {
+  min-height: 90dvh;
   display: flex;
   align-items: center;
 }
-.Authentication .remember_me,
-.Authentication .forgot_password {
-  margin: 0 0 0.8em;
-}
-.Authentication .extras {
-  margin: 2em 0 0;
-  text-align: center;
-}
-.Authentication .Login,
-.Authentication .Signup {
-  width: 92dvw;
+.contactpage .container {
+  display: grid;
+  gap: 2em;
+  width: 90%;
   margin: auto;
-  padding: 16px;
+}
+.contactpage .container .contact_details {
+  padding: 16px 0 0;
+}
+.contactpage .container .contact_details .header {
+  margin: 0 0 2.5em;
+}
+.contactpage .container .contact_details .header h1 {
+  margin: 0 0 0.5em;
+  font-size: 1.84em;
+}
+.contactpage .container .contact_details .contact {
+  width: 60%;
+}
+.contactpage .container .contact_details .contact p {
+  line-height: 1.5;
+  margin: 0.5em 0;
+  font-size: 1.28em;
+}
+.contactpage .container .contact_details .contact .details {
+  display: grid;
+  gap: 2em;
+}
+.contactpage .container .contact_details .contact .details .detail {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-items: center;
+  gap: 0.5em;
+}
+.contactpage .container .contact_details .contact .details .detail p {
+  display: grid;
 }
 
 @media screen and (min-width: 1024px) {
-  .Authentication .Login {
-    width: 30dvw;
+  .contactpage .container {
+    grid-template-columns: 1fr 1fr;
   }
-  .Authentication .Signup {
-    width: 45dvw;
+  .contactpage .container .contact_form {
+    padding: 16px;
   }
 }
 
-/*# sourceMappingURL=Authentication.css.map */
+/*# sourceMappingURL=ContactPage.css.map */

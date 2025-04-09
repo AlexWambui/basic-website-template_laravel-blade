@@ -13,16 +13,39 @@ a {
   text-decoration: none;
 }
 
-.custom_form .custom_inputs {
-  position: relative;
-  min-height: 3.5rem;
-  margin-bottom: 2.5rem;
+.stacked {
+  display: grid;
 }
-.custom_form .custom_inputs:last-of-type {
-  margin-bottom: 2rem;
+
+.center {
+  text-align: center;
 }
-.custom_form .custom_inputs input,
-.custom_form .custom_inputs textarea {
+
+button {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn_block {
+  width: 100%;
+}
+
+.custom_form .header {
+  display: flex;
+  gap: 0.8em;
+  background: #000;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 8px 8px 0 0;
+}
+.custom_form .header a {
+  color: blue;
+}
+.custom_form input,
+.custom_form textarea {
   width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
@@ -32,9 +55,37 @@ a {
   transition: 0.3s ease-in-out;
   background: transparent;
 }
-.custom_form .custom_inputs input:focus,
-.custom_form .custom_inputs textarea:focus {
+.custom_form input:focus,
+.custom_form textarea:focus {
   border-color: blue;
+}
+.custom_form label {
+  font-size: 1rem;
+}
+.custom_form label.required::after {
+  content: " * ";
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 1em;
+}
+.custom_form span {
+  display: block;
+  font-weight: bold;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+.custom_form .inputs,
+.custom_form .custom_inputs {
+  margin-bottom: 2.5rem;
+}
+.custom_form .inputs:last-of-type,
+.custom_form .custom_inputs:last-of-type {
+  margin-bottom: 2rem;
+}
+.custom_form .custom_inputs {
+  position: relative;
+  min-height: 3.5rem;
 }
 .custom_form .custom_inputs input:focus + label, .custom_form .custom_inputs input:not(:placeholder-shown) + label,
 .custom_form .custom_inputs textarea:focus + label,
@@ -51,26 +102,115 @@ a {
   left: 1rem;
   top: 1.5em;
   transform: translateY(-50%);
-  font-size: 1rem;
   pointer-events: none;
   transition: 0.3s ease-in-out;
-}
-.custom_form .custom_inputs span {
-  display: block;
-  font-weight: bold;
-  color: red;
-  font-size: 0.9rem;
-  margin-top: 0.3rem;
 }
 .custom_form button {
   background: black;
   color: white;
-  border: none;
   padding: 12px 24px;
   border-radius: 8px;
-  font-size: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .custom_form .inputs_group,
+  .custom_form .inputs_group_3 {
+    display: grid;
+    gap: 0 1em;
+  }
+  .custom_form .inputs_group {
+    grid-template-columns: 1fr 1fr;
+  }
+  .custom_form .inputs_group_3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table table thead {
+  background: #000;
+  color: #fff;
+}
+.table table thead th {
+  padding: 2px 4px;
+  font-size: 0.9em;
+  text-align: left;
+}
+.table table thead th:first-of-type {
+  border-radius: 4px 0 0 0;
+}
+.table table thead th:last-of-type {
+  border-radius: 0 4px 0 0;
+}
+.table table tbody tr {
+  border-bottom: 1px solid grey;
+}
+.table table tbody tr td {
+  padding: 4px;
+  font-size: 0.95em;
+}
+.table table tbody tr td p:not(:first-of-type),
+.table table tbody tr td div:not(:first-of-type) {
+  margin: 0.2em 0 0;
+}
+.table table tbody tr td img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.table table tbody tr .action_buttons {
+  display: flex;
+  gap: 0.8em;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  color: #fff;
   font-weight: bold;
-  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.notification-danger {
+  background: #ff0000;
+}
+
+.notification-success {
+  background: #008000;
+}
+
+.notification-status {
+  background: #49cefa;
+}
+
+.notification-warning {
+  background: #c28005;
+}
+
+.inline_alert {
+  margin: 0.1em 0 0;
+  color: #ff0000;
+}
+
+.inline_alert_success {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  color: #008000;
 }
 
 nav {

@@ -1,4 +1,4 @@
-.alert {
+.notification {
     padding: 0.5em 1em;
     border-radius: 4px;
     color: #fff;
@@ -12,19 +12,19 @@
     z-index: 10;
 }
 
-.alert-danger {
+.notification-danger {
     background: $danger;
 }
 
-.alert-success {
+.notification-success {
     background: $success;
 }
 
-.alert-status {
+.notification-status {
     background: $status;
 }
 
-.alert-warning {
+.notification-warning {
     background: $warning;
 }
 

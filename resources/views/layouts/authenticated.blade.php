@@ -1,5 +1,6 @@
 <x-app-layout>
     <x-slot name="head">
+        @vite(['resources/css/pages/compiled/MainApp.css'])
         {{ $head ?? '' }}
     </x-slot>
 
@@ -8,7 +9,7 @@
         @include('partials.aside')
 
         <div class="app_content">
-            @include('partials.messages')
+            @include('partials.notifications')
             
             {{ $slot }}
         </div>

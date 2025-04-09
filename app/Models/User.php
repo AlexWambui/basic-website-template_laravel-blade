@@ -44,6 +44,8 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'user_level' => 'integer',
+            'user_status' => 'integer',
         ];
     }
 
@@ -59,4 +61,24 @@ class User extends Authenticatable
         0 => 'inactive',
         1 => 'active',
     ];
+
+    public function getFullNameAttribute():string
+    {
+        return $this->first_name. ' ' . $this->last_name;
+    }
+
+    public function getPhoneNumbersAttribute(): string
+    {
+        $numbers = array_filter(
+            [$this->phone_number, $this->phone_other],
+            fn ($value) => !is_null($value) && $value !== ''
+        );
+
+        return implode(' / ', $numbers);
+    }
+
+    public function getUserLevelLabelAttribute(): string
+    {
+        return self::USERLEVELS[$this->user_level] ?? 'unknown level';
+    }
 }

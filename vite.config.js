@@ -12,6 +12,8 @@ export default defineConfig({
                 'resources/css/pages/ServicesPage.css',
                 'resources/css/pages/ContactPage.css',
                 'resources/css/pages/Authentication.css',
+                'resources/css/pages/MainApp.css',
+                'resources/css/pages/Dashboard.css',
 
                 'resources/js/app.js'
             ],

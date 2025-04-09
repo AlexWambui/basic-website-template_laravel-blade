@@ -1,4 +1,17 @@
 .custom_form {
+    .header {
+        display: flex;
+        gap: 0.8em;
+        background: $elements_background;
+        color: $elements_color;
+        padding: 8px 24px;
+        border-radius: 8px 8px 0 0;
+
+        a {
+            color: $link_color;
+        }
+    }
+
 	input,
 	textarea {
 		width: 100%;
@@ -75,12 +88,8 @@
     button {
         background: black;
         color: white;
-        border: none;
         padding: 12px 24px;
         border-radius: 8px;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
     }
 }
 
