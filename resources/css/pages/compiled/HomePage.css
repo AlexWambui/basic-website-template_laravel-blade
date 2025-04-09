@@ -149,6 +149,9 @@ button {
 .table table thead th:last-of-type {
   border-radius: 0 4px 0 0;
 }
+.table table thead .center {
+  text-align: center;
+}
 .table table tbody tr {
   border-bottom: 1px solid grey;
 }

@@ -1,7 +1,7 @@
 @import "_guest";
 
 .Authentication {
-	height: 90dvh;
+	min-height: 90dvh;
 	display: flex;
 	align-items: center;
 
@@ -16,10 +16,43 @@
 	}
 
 	.Login,
-	.Signup {
+	.Signup,
+	.ForgotPassword,
+	.ResetPassword,
+	.VerifyEmail {
 		width: 92dvw;
 		margin: auto;
 		padding: 16px;
+	}
+
+	.ForgotPassword,
+	.VerifyEmail {
+		.header {
+			margin: 0 0 2em;
+		}
+	}
+
+	.VerifyEmail {
+		.actions {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			form {
+				&:last-of-type {
+					justify-self: flex-end;
+				}
+			}
+		}
+	}
+}
+
+.userprofile {
+	.custom_form {
+		margin: 0 0 3.2em;
+
+		form {
+			padding: 16px;
+		}
 	}
 }
 
@@ -31,6 +64,12 @@
 
 		.Signup {
 			width: 45dvw;
+		}
+
+		.ForgotPassword,
+		.ResetPassword,
+		.VerifyEmail {
+			width: 30dvw;
 		}
 	}
 }

@@ -12,6 +12,19 @@
 	padding: $container_padding;
 }
 
+.image {
+	border-radius: 8px;
+
+	img {
+		object-fit: cover;
+	}
+}
+
+img {
+	object-fit: cover;
+	border-radius: 8px;
+}
+
 a {
 	text-decoration: none;
 }
@@ -22,6 +35,10 @@ a {
 
 .center {
 	text-align: center;
+}
+
+.text-danger {
+	color: $danger!important;
 }
 
 button {

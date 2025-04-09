@@ -21,6 +21,10 @@ a {
   text-align: center;
 }
 
+.text-danger {
+  color: #ff0000 !important;
+}
+
 button {
   border: none;
   outline: none;
@@ -31,6 +35,11 @@ button {
 
 .btn_block {
   width: 100%;
+}
+
+.btn_danger {
+  background: #ff0000 !important;
+  color: #fff;
 }
 
 .custom_form .header {
@@ -68,7 +77,7 @@ button {
   font-weight: bold;
   font-size: 1em;
 }
-.custom_form span {
+.custom_form .inline_alert {
   display: block;
   font-weight: bold;
   color: red;
@@ -148,6 +157,9 @@ button {
 }
 .table table thead th:last-of-type {
   border-radius: 0 4px 0 0;
+}
+.table table thead .center {
+  text-align: center;
 }
 .table table tbody tr {
   border-bottom: 1px solid grey;
@@ -354,7 +366,7 @@ footer .copyright {
   }
 }
 .Authentication {
-  height: 90dvh;
+  min-height: 90dvh;
   display: flex;
   align-items: center;
 }
@@ -367,9 +379,30 @@ footer .copyright {
   text-align: center;
 }
 .Authentication .Login,
-.Authentication .Signup {
+.Authentication .Signup,
+.Authentication .ForgotPassword,
+.Authentication .ResetPassword,
+.Authentication .VerifyEmail {
   width: 92dvw;
   margin: auto;
+  padding: 16px;
+}
+.Authentication .ForgotPassword .header,
+.Authentication .VerifyEmail .header {
+  margin: 0 0 2em;
+}
+.Authentication .VerifyEmail .actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Authentication .VerifyEmail .actions form:last-of-type {
+  justify-self: flex-end;
+}
+
+.userprofile .custom_form {
+  margin: 0 0 3.2em;
+}
+.userprofile .custom_form form {
   padding: 16px;
 }
 
@@ -379,6 +412,11 @@ footer .copyright {
   }
   .Authentication .Signup {
     width: 45dvw;
+  }
+  .Authentication .ForgotPassword,
+  .Authentication .ResetPassword,
+  .Authentication .VerifyEmail {
+    width: 30dvw;
   }
 }
 
