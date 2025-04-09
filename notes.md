@@ -40,6 +40,10 @@ messages
     ```bash
     php artisan migrate
     ```
+6. Make sure GD is installed to be able to use image intervention library.
+    ```bash
+    sudo apt-get install php-gd
+    ```
 
 
 ## Usage
