@@ -1,3 +1,17 @@
+# TODOs
+- use pagination for at least 50 records.
+- complete the logic for all auth pages.
+
+users
+- CRUD.
+
+messages
+- RUD.
+- admins can respond to users with an email.
+- show latest unread messages on admins dashboard.
+
+
+
 ## Features
 - Authentication.
 - Admin Dashboard.
