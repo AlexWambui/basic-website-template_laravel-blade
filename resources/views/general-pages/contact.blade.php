@@ -2,7 +2,7 @@
     <x-slot name="head">
         <meta name="description" content="Contact {{ config('app.name') }} for inquiries, support, and business collaborations. Reach us via phone, email, or visit our office.">
         <meta name="keywords" content="contact {{ config('app.name') }}, customer support, business inquiries, reach us">
-        @vite(['resources/css/pages/ContactPage.css'])
+        @vite(['resources/css/pages/compiled/ContactPage.css'])
         <title>Contact {{ config('app.name') }} - Get in Touch</title>
         
         <script type="application/ld+json">

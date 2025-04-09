@@ -7,13 +7,13 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/icons/icons.css',
-                'resources/css/pages/HomePage.css',
-                'resources/css/pages/AboutPage.css',
-                'resources/css/pages/ServicesPage.css',
-                'resources/css/pages/ContactPage.css',
-                'resources/css/pages/Authentication.css',
-                'resources/css/pages/MainApp.css',
-                'resources/css/pages/Dashboard.css',
+                'resources/css/pages/compiled/HomePage.css',
+                'resources/css/pages/compiled/AboutPage.css',
+                'resources/css/pages/compiled/ServicesPage.css',
+                'resources/css/pages/compiled/ContactPage.css',
+                'resources/css/pages/compiled/Authentication.css',
+                'resources/css/pages/compiled/MainApp.css',
+                'resources/css/pages/compiled/Dashboard.css',
 
                 'resources/js/app.js'
             ],

@@ -2,7 +2,7 @@
     <x-slot name="head">
         <meta name="description" content="Discover {{ config('app.name') }}, a leading ---replace_main service you offer and your location---. We specialize in ---replace_list services you special in--- delivering high-quality services in the global market.">
         <meta name="keywords" content="---replace_main service you offer--- {{ config('app.location') }}, ---replace_list of services you offer.---">
-        @vite(['resources/css/pages/AboutPage.css'])
+        @vite(['resources/css/pages/compiled/AboutPage.css'])
         <title>About {{ config('app.name') }} - Leading ---replace_main service you offer--- in {{ config('app.location') }}</title>
 
 
