@@ -54,10 +54,6 @@ messages
 2. Open your browser and navigate to the following address: [http://localhost:8000](http://localhost:8000)
 
 
-### Laravel Details
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-
 
 -------------------------------------------------
 Sass:
